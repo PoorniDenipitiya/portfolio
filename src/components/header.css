@@ -1,0 +1,16 @@
+/* src/components/Header.css */
+
+.custom-header {
+    background-color: #d76100; /* Ant Design default dark color for Header */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  
+  .logo {
+    color: white;
+    font-weight: bold;
+  }
+  

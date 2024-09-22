@@ -1,0 +1,9 @@
+/* src/components/Footer.css */
+
+.custom-footer {
+    text-align: center;
+    background-color: #001529;
+    color: white;
+    padding: 10px 0;
+  }
+  

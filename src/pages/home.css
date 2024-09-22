@@ -1,0 +1,128 @@
+/* src/pages/Home.css */
+
+.layout {
+  min-height: 100vh;
+}
+
+.content-layout {
+  display: flex;
+  padding: 50px;
+  background-image: url('../images/nature.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.box {
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.content-left {
+  flex: 5;
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+  text-align: center;
+  height: 100vh; 
+  padding-top: 6%;
+}
+
+
+
+.para {
+  font-size: 75px;
+}
+
+/* Responsive word */
+.word {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  font-size: clamp(40px, 5vw, 75px); /* Adjusts font size based on viewport width */
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden;
+}
+
+.char {
+  display: inline-block;
+  margin: 0 5px;
+  animation: scroll-text 2s ease-in-out infinite alternate;
+}
+
+.char-top {
+  animation-name: move-top;
+}
+
+.char-bottom {
+  animation-name: move-bottom;
+}
+
+@keyframes move-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes move-bottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+.content-middle {
+  flex: 4;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  text-align:justify;
+  font-size: 24px;
+ /* font-family: "Arial", sans-serif;*/
+  font-family: "Comfortaa", sans-serif;
+  background-color: rgba(255, 255, 255, 0.126);
+}
+
+.content-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.social-icons a {
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px dashed #fff;
+  color: #fff;
+  margin: 10px 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: flex; /* Center icons */
+  align-items: center; /* Center icons vertically */
+  justify-content: center; /* Center icons horizontally */
+  font-size: 30px; /* Increased font size for icons */
+}
+
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.aboutPara{
+  font-weight:600;
+  color: rgba(255, 255, 255, 0.641);
+}
