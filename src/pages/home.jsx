@@ -5,6 +5,7 @@ import CustomHeader from '../components/header';  // Importing Header component
 import CustomFooter from '../components/footer';  // Importing Footer component
 import { FaMailBulk, FaLinkedin, FaFacebook, FaMedium, FaGithub, FaYoutube, FaHackerrank } from 'react-icons/fa';
 
+
 const { Content } = Layout;
 
 const words = ['Developer', 'Designer', 'Violinist', 'Organizer', 'Explorer'];
@@ -67,9 +68,13 @@ const Home = () => {
 
         
       </Content>
+
+
       <br></br>
+
+      
       <hr></hr>
-      <div>
+      <div className='Education'>
           <p> hello</p>
         </div>
       <CustomFooter />

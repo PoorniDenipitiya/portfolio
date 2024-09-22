@@ -24,7 +24,8 @@
   color: white;
   font-family: "Comfortaa", sans-serif;
   text-align: center;
-  height: 100vh; 
+  height: 75vh; 
+  /*height: 100vh;*/
   padding-top: 6%;
 }
 
