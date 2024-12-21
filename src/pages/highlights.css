@@ -1,0 +1,65 @@
+.highlight-container {
+  column-count: 4; /* Number of columns */
+  column-gap: 10px; /* Gap between columns */
+  margin: 50px auto;
+  max-width: 90%;
+}
+
+.highlight-item {
+  position: relative;
+  margin-bottom: 10px; /* Space between images in the column */
+  display: inline-block;
+  width: 100%; /* Ensures the images fit into the column */
+  cursor: pointer;
+}
+
+.highlight-image {
+  width: 100%;
+  height: auto; /* Maintain original aspect ratio */
+  display: block;
+}
+
+.highlight-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Darker overlay */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+.highlight-item:hover .highlight-image {
+  filter: blur(5px); /* Blur effect on hover */
+}
+
+.highlight-item:hover .highlight-overlay {
+  opacity: 1; /* Overlay appears on hover */
+}
+
+/* Responsive Design - Adjust column count */
+@media (max-width: 1200px) {
+  .highlight-container {
+    column-count: 3; /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .highlight-container {
+    column-count: 2; /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .highlight-container {
+    column-count: 1; /* 1 column on very small screens */
+  }
+}

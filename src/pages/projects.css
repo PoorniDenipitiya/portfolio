@@ -1,0 +1,103 @@
+/* Apply equal margin to all sides and ensure responsive design */
+.carousel {
+    /*height: 500px;*/
+    height: 900px;
+    perspective: 600px;
+    transform: translateY(-50px); /* Adjust to vertically center */
+    margin: 50px auto; /* Equal margin on all four sides */
+  
+    padding: 20px; /* Remove padding if any */
+    max-width: 90%; /* Set a max width (90%) to prevent full width */
+    box-sizing: border-box;  /* Add 50px left and right padding */
+  
+  }
+  
+  .carousel .carousel-item {
+    cursor: grab;
+    width: 100%; /* Set width to 100% to make the carousel responsive */
+    max-width: 500px; /* Set a max width for larger screens */
+    margin: 0 auto; /* Center the carousel items */
+    height: auto; /*for show more detials*/
+   /* border: 2px solid #d76100;*/
+    box-shadow: #d76100;
+    background-color: #d76100;
+    margin-top: 100px;
+    padding: 10px; /* Add padding inside the carousel item for spacing */
+ 
+  }
+    
+  .carousel .carousel-item:active {
+    cursor: grabbing;
+    height: auto;
+  }
+
+  
+  
+  
+  .carousel .carousel-item img {
+    width: 100%;
+    height: 300px; /* Adjust the image height */
+   /* border: 2px solid #d76100;
+    box-shadow: #d76100;*/
+   
+    object-fit: cover; /* Ensure images scale correctly */
+  }
+  
+  .carousel .carousel-item h3 {
+    background-color: #d76100;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0; /* Adjust margin for space around the heading */
+    padding: 10px 5px;
+    text-align: center;
+    border-color: #d76100;
+    border-radius: 2px;
+  }
+  
+ .carousel .carousel-item .card_para {
+  background-color: #f5f5f5; /* A light background color to make it stand out */
+  color: black;
+  font-size: 1em;
+  padding: 10px;
+  text-align: center;
+  border-radius: 2px;
+  margin: 10px 0; /* Add margin to space out the content */
+  line-height: 1.4em; /* Ensure good readability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+
+}
+  
+  /* Make the carousel responsive */
+  @media (max-width: 768px) {
+    .carousel {
+      height: 700px;
+     /* height: 550px; */ /* Adjust height for smaller screens */
+    /*height: 400px;*/
+    }
+    
+    .carousel .carousel-item img {
+      height: 250px; /* Smaller height for smaller screens */
+    }
+  
+    .carousel .carousel-item h3 {
+      font-size: 1.2em; /* Reduce font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel {
+    /*  height: 350px;*/ /* Further reduce height for very small screens */
+  /*  height: 450px; */
+  height: 650px; 
+  }
+  
+    .carousel .carousel-item img {
+      height: 200px; /* Further reduce image height for very small screens */
+    }
+  
+    .carousel .carousel-item h3 {
+      font-size: 1em; /* Further reduce font size for very small screens */
+    }
+  }
+  

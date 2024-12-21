@@ -8,7 +8,7 @@ const { Footer } = Layout;
 const CustomFooter = () => {
   return (
     <Footer className="custom-footer">
-      ©2024 My Portfolio, All Rights Reserved.
+      © 2024 Poorni Denipitiya. All Rights Reserved.
     </Footer>
   );
 };

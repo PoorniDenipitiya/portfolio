@@ -1,0 +1,114 @@
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.left-part {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out; /* Example animation */
+}
+
+.right-part {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row; /* Change to column for vertical layout */
+  align-items: center; /* Center the items horizontally */
+  margin-top: 15%;
+  gap: 10px;
+}
+
+.social-item {
+  display: flex;
+  justify-content: center; /* Center items in the box */
+  align-items: center; /* Center items vertically */
+  padding: 20px; /* Padding for the box */
+  margin: 10px 0; /* Spacing between items */
+  /*width: 250px;*/ /* Set a fixed width for the box */
+ /* height: 70px; *//* Set a fixed height for the box */
+  border: 1px solid #ddd; /* Border around the box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+.social-item:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Add hover effect */
+}
+
+.social-item a {
+  display: flex;
+  align-items: center; /* Align icons and text */
+  color: #d76100; /* Set icon color to orange */
+  /*font-size: 2.5rem;*/ /* Increase icon size */
+}
+
+.social-item span {
+  margin-left: 10px; /* Space between icon and text */
+  font-size: 1.2rem; /* Increase font size */
+}
+
+/* Animation styling */
+.animation img {
+  width: 100%; /* Makes the animation responsive */
+  max-width: 200px; /* Set a max width to ensure animation isn't too large */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.animation h2 {
+  color: brown;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-part {
+    padding: 0;
+  }
+
+  .social-links {
+    padding: 10px; /* Adjust padding for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .animation h2 {
+    font-size: 30px; /* Adjust font size for small screens */
+  }
+
+  .social-links {
+    padding: 10px; /* Adjust padding for small screens */
+  }
+}

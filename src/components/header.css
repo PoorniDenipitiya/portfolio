@@ -1,16 +1,108 @@
 /* src/components/Header.css */
 
+/* Header styling */
 .custom-header {
-    background-color: #d76100; /* Ant Design default dark color for Header */
-    color: white;
+  background-color: #d76100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: fixed; /* Make the header fixed */
+  top: 0; /* Stick to the top of the page */
+  width: 100%; /* Make the header span the full width of the page */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+}
+
+.logo {
+  font-size: 25px;
+  letter-spacing: 8px;
+}
+
+.logo a{
+  color: white;
+  text-decoration: none;
+}
+.nav-menu {
+  margin-left: auto;
+}
+
+/* Desktop menu styling */
+.nav-menu ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin: 0 15px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ffcc00;
+}
+
+/* Menu Icon Styles */
+.menu-icon {
+  display: none; /* Hidden by default on larger screens */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.menu-icon .bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon .bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Menu for Mobile */
+@media (max-width: 768px) {
+  .nav-menu ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #d76100;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+  }
+
+  .nav-menu.open ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
   }
-  
-  .logo {
-    color: white;
-    font-weight: bold;
+
+  .nav-menu li {
+    margin: 10px 0;
   }
-  
+
+  .menu-icon {
+    display: flex;
+  }
+}
