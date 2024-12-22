@@ -79,7 +79,14 @@ const TechnicalSkills = () => {
         marginRight: 'auto',
        // maxWidth: '600px', // Adjust as needed
         color: "brown", 
-        fontSize: "50px" 
+        //fontSize: "50px" 
+        fontSize: {
+          xs: '24px', // font size for extra-small screens
+          sm: '32px', // font size for small screens
+          md: '40px', // font size for medium screens
+          lg: '50px', // font size for large screens
+          xl: '60px', // font size for extra-large screens
+        },
       }}
     >
       Technologies and Tools

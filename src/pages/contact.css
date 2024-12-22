@@ -47,7 +47,10 @@
 }
 
 .social-item:hover {
-  background-color: rgba(0, 0, 0, 0.05); /* Add hover effect */
+  /*background-color: rgba(0, 0, 0, 0.05);*/ /* Add hover effect */
+  border: 2px solid #d76100;
+  transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
 }
 
 .social-item a {
@@ -104,11 +107,43 @@
 }
 
 @media (max-width: 480px) {
-  .animation h2 {
-    font-size: 30px; /* Adjust font size for small screens */
+  .social-links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
   }
 
+  .social-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .social-item a {
+    font-size: 1.2rem; /* Adjust font size for very small screens */
+  }
+
+  .social-item a svg {
+    font-size: 1.5rem; /* Adjust icon size for very small screens */
+  }
+}
+
+@media (max-width: 320px) {
   .social-links {
-    padding: 10px; /* Adjust padding for small screens */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+  }
+
+  .social-item {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .social-item a {
+    font-size: 1rem; /* Adjust font size for very small screens */
+  }
+
+  .social-item a svg {
+    font-size: 1.2rem; /* Adjust icon size for very small screens */
   }
 }
